@@ -20,7 +20,7 @@ This project generates synthetic wellness data and uses it to train an XGBoost m
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repository-url>
+    git clone https://github.com/rushitkansara/wellness-ai
     cd wellness-ai
     ```
 
