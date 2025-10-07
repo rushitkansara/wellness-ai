@@ -1,26 +1,55 @@
 # Wellness AI
 
-This project generates synthetic wellness data for machine learning applications. The data is designed to be realistic and can be used to train models for various wellness-related tasks, such as predicting stress levels, recommending healthy habits, and identifying individuals at risk of developing chronic diseases.
+This project generates synthetic wellness data and uses it to train an XGBoost model for machine learning applications. The data is designed to be realistic and can be used to train models for various wellness-related tasks.
 
-## Features
+## Project Structure
 
-*   **Realistic Data:** The data is generated based on a set of rules that are designed to mimic the real world. For example, the model takes into account factors such as age, sex, activity level, and sleep habits when generating data.
-*   **Customizable:** The data generation process is highly customizable. You can specify the number of users, the amount of data to generate for each user, and the specific features to include in the data.
-*   **Extensible:** The data generation code is easy to extend. You can add your own features to the data, or you can modify the existing rules to better suit your needs.
+- `ml_wellness_xgboost.ipynb`: The main Jupyter notebook for data analysis, model training, and evaluation.
+- `synthetic_data_generator.py`: A script to generate the synthetic wellness data used in the notebook.
+- `synthetic-health-data/`: Directory containing the generated data (`synthetic_wellness.csv`).
+- `requirements.txt`: A list of Python dependencies for the project.
 
 ## Getting Started
 
-To get started, you will need to have Python installed. You can then install the necessary dependencies by running the following command:
+### Prerequisites
 
-```
-pip install -r requirements.txt
-```
+- Python 3.8+
+- `venv` for virtual environment management
 
-Once you have installed the dependencies, you can generate the data by running the `ml_wellness_project_rushit.ipynb` notebook in the `synthetic-health-data` directory.
+### Setup
+
+1.  **Clone the repository:**
+    ```bash
+    git clone <your-repository-url>
+    cd wellness-ai
+    ```
+
+2.  **Create and activate a virtual environment:**
+    ```bash
+    python3 -m venv wellness-env
+    source wellness-env/bin/activate
+    ```
+    *On Windows, use `wellness-env\Scripts\activate`*
+
+3.  **Install the dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ## Usage
 
-The generated data is saved in a CSV file. You can use this file to train your machine learning models. The data is in a tabular format, with each row representing a single day of data for a single user. The columns in the data represent the different features that were generated.
+1.  **Generate Data (Optional):**
+    If `synthetic-health-data/synthetic_wellness.csv` does not exist, you can generate it by running the data generator script:
+    ```bash
+    python synthetic_data_generator.py
+    ```
+
+2.  **Run the Jupyter Notebook:**
+    Launch Jupyter Lab to explore the analysis and model:
+    ```bash
+    jupyter lab
+    ```
+    Then, open and run the `ml_wellness_xgboost.ipynb` notebook.
 
 ## Contributing
 
