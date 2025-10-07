@@ -4,3 +4,5 @@ wellness-env
 
 # macOS system files
 .DS_Store
+
+synthetic-health-data/
