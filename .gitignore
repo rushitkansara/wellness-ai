@@ -1,0 +1,6 @@
+/ environment variables
+.env
+wellness-env
+
+# macOS system files
+.DS_Store
